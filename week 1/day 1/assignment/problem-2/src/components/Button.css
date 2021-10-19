@@ -1,0 +1,13 @@
+.button{
+    width:200px;
+    height: 50px;
+    margin: 20px;
+    font-weight: 800;
+    border-radius: 20px;
+}
+.inone{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width:500px;
+
+}
