@@ -1,0 +1,14 @@
+.blankD{
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+  padding: 2%;
+  width: 350px;
+  background-color: aqua;
+  border-radius: 25px;
+  border: 1px solid red;
+  margin-bottom: 50px;
+}
+.blankD>button{
+  margin: 10px;
+}
