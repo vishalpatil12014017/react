@@ -41,12 +41,13 @@ function Todo() {
   return (
     <>
       <div className="todo">
+        <h1>To Do List</h1>
         <List List={showfilter? todoList.filter((e)=>
         e.status):todoList } handleToggle={handleToggle} handleRemove={handleRemove} 
         handleCompleted={handleCompleted}  />
         <TodoInput handleAddTodo={handleAddTodo} ></TodoInput>
         <div className="butto">
-          <button onClick={()=>{
+          <button className="btn btn-primary" onClick={()=>{
             setShowfilter(!showfilter)
             
           }}>{showfilter? "All Todoes": "Show Completed"}</button>
