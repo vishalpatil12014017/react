@@ -1,0 +1,12 @@
+.navbar{
+    background-color: #F8F8F8;
+    
+}
+body{
+    background-color: rgb(32, 32, 32);
+    
+}
+#basic-addon2{
+    border: 1px solid rgb(206,212,218);
+    border-right: none;
+}

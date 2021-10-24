@@ -48,8 +48,7 @@ function Todo() {
         <TodoInput handleAddTodo={handleAddTodo} ></TodoInput>
         <div className="butto">
           <button className="btn btn-primary" onClick={()=>{
-            setShowfilter(!showfilter)
-            
+            setShowfilter(!showfilter)   
           }}>{showfilter? "All Todoes": "Show Completed"}</button>
         </div>
       </div>

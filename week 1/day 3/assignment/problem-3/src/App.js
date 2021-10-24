@@ -1,9 +1,10 @@
 import Card from "./components/Card"
 function App() {
+
   return (
-    <div className="container">
-         <Card></Card>
-    </div>
+    <>
+          <Card></Card>
+    </>
   );
 }
 export default App;
