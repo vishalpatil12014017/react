@@ -8,9 +8,9 @@ import "./components/Todo.css"
 function App() {
   return (
     <>
-      {/* <div className="main">
+      <div className="main">
         <Counter start="10" end="15"></Counter>
-      </div> */}
+      </div>
       <div className="todo">
         <TodoInput></TodoInput>
       </div>
