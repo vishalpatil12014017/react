@@ -1,0 +1,75 @@
+.todo{ 
+       width: 40%;
+       text-align: center;
+       margin: auto;
+       margin-top: 30px;
+       background-color: rgb(206,206,206);
+       border-radius: 25px;
+       padding: 10px;
+       border-radius: 1px solid red;
+       /* background-image: url("https://static2.bigstockphoto.com/8/6/2/large1500/268758547.jpg"); */
+
+}
+.todo>input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-style: none;
+    background-color: white;
+    padding: 10px;
+    width: 60%;
+    border-radius: 15px;
+    font-size: 30px;
+    border: 1px solid red;
+}
+.todo>button{
+   
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    border-style: none;
+    background-color: white;
+    width: 60px;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 30px;
+    border: 1px solid red;
+}
+.form-check{
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    border-style: none;
+    background-color: white;
+    text-align: left;
+    padding: 8px;
+    width: 69%;
+    border-radius: 15px;
+    font-size: 30px;
+
+}
+.form-check-input{
+    background-color: red;
+}
+.float-end{
+    border: none;
+    background-color: white;
+    font-weight: 100;
+}
+.butto>button{
+    border: 1px solid red;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.next{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    border-style: none;
+    background-color: white;
+    width: 100px;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 30px;
+    border: 1px solid red;
+}
