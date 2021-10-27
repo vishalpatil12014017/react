@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRef, useState, useEffect } from 'react'
 import Formdata from './Formdata'
+
 import Table from './Table'
 function Form() {
     const [page, setPage] = useState(0)

@@ -1,0 +1,24 @@
+{
+  "Form": [
+    {
+      "username": "Vishal Patil",
+      "age": "21",
+      "file": "C:\\fakepath\\1624122736874 (1).jpg",
+      "ismarried": true,
+      "address": "nagrale",
+      "department": "Mechnical",
+      "salary": "11",
+      "id": 1
+    },
+    {
+      "username": "v",
+      "age": "22",
+      "file": "C:\\fakepath\\1624122736874 (1).jpg",
+      "ismarried": true,
+      "address": "nagrale",
+      "department": "Electrical",
+      "salary": "22",
+      "id": 2
+    }
+  ]
+}
