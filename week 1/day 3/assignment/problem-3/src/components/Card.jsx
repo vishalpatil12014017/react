@@ -14,6 +14,8 @@ function Card() {
     const [sortingData, setSortingData] = useState([...newdata])
     const [rating, setRating] = useState([])
     const [isClicked, setIsClicked] = useState(false)
+
+    
     const handleRating = (e) => {
         const updatedList = restarunt.filter((el) => {
             return el.ratings >= e.target.value

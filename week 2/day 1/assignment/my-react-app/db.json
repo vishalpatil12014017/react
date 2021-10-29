@@ -1,0 +1,34 @@
+{
+  "Form": [
+    {
+      "username": "Vishal Patil",
+      "age": "21",
+      "file": "C:\\fakepath\\1624122736874 (1).jpg",
+      "ismarried": true,
+      "address": "nagrale",
+      "department": "Mechnical",
+      "salary": "11",
+      "id": 1
+    },
+    {
+      "username": "shalakapatil7042@gmail.com",
+      "age": "23",
+      "file": "C:\\fakepath\\1624122736874 (1).jpg",
+      "ismarried": true,
+      "address": "nagrale",
+      "department": "Electrical",
+      "salary": "440000",
+      "id": 2
+    },
+    {
+      "username": "Vishal_Patil1111000",
+      "age": "22",
+      "file": "C:\\fakepath\\1624122736874 (1).jpg",
+      "ismarried": true,
+      "address": "sadasccascv",
+      "department": "Mechnical",
+      "salary": "4400001",
+      "id": 3
+    }
+  ]
+}
