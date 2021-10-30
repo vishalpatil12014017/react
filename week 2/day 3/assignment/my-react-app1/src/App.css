@@ -1,0 +1,14 @@
+
+body{
+  background-color: rgb(17, 17, 17);
+}
+.input-group{
+ margin: auto;
+}
+.input-group>button{
+  background-color: rgb(108,117,125);
+  color:white
+}
+/* .card{
+  border: 1px solid red;
+} */
