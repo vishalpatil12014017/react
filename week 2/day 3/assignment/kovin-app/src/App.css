@@ -1,0 +1,12 @@
+.App{
+  /* padding: 20px; */
+  text-align: center;
+  /* font-size: 40px; */
+  color: white;
+}
+body{
+  background-color: rgb(12, 12, 12);
+}
+.center>div{
+margin: auto;
+}
