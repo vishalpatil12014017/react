@@ -40,13 +40,13 @@ function Card() {
     const handlePayment = (e) => {
         const updatedList = restarunt.filter((el) => {
             if (e.target.value === 1 && el.cash === true) {
-                return e
+                return el
             }
             else if (e.target.value === 2 && el.card === true) {
-                return e
+                return el
             }
             else if (e.target.value === 3 && el.card === true) {
-                return e
+                return el
             } else if (e.target.value === 4 && el.card === true && el.cash === true && el.upi === true) {
                 return el
             }
