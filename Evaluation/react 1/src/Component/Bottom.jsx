@@ -8,17 +8,24 @@ function Bottom() {
     const [Toorder, setToorder] = useState([]);
     const [ShowData, setShowData] = useState(inventry)
     useEffect(() => {
-        handleAdd()
-        ShowcurrentData();
-        ShowOrderData();
-      
+        handleAdd(Listdata);
     },[] )
-    const [button,setButton]=useState(true)
+    const [button,setButton]=useState()
     const handleAdd=(id)=>{
         const updated=Toorder.filter((e)=>{
             if(e.id===id){
                 e.stock=true
                 setInventry([...inventry,e])
+                e=!e  
+            }
+            return e;
+        })
+        setToorder(updated)
+        
+    }
+    const handledelete=(id)=>{
+        const updated=Toorder.filter((e)=>{
+            if(e.id===id){
                 e=!e  
             }
             return e;
@@ -63,7 +70,7 @@ function Bottom() {
             </div>
             <div className="row mt-3">
                 <div className="col col-3"></div>
-                <div className="col"><Listdata List={ShowData} status={button} handleAdd={handleAdd} handleToggle={handleToggle}></Listdata></div>
+                <div className="col"><Listdata List={ShowData} status={button} handleAdd={handleAdd} handleToggle={handleToggle} handledelete={handledelete}></Listdata></div>
                 <div className="col col-3"></div>
             </div>
             
