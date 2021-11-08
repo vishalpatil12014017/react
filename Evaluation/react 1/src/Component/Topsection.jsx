@@ -11,7 +11,7 @@ function Topsection({ handleAddCurrentInventry, handleAddtoOrderInventry }) {
         const data = {
             id: nanoid(6),
             title: text,
-            status: false,
+            status: true,
             stock: true,
         };
         handleAddCurrentInventry(data);
