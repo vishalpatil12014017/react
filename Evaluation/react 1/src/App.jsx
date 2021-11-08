@@ -1,10 +1,10 @@
 import React from 'react'
-import Data from './Component/Data'
+import Datatoadd from './Component/Datatoadd'
 function App() {
   return (
     <div className="App">
-      <div className="container">
-          <Data></Data>
+      <div className="container p-4">
+          < Datatoadd></ Datatoadd>
       </div>
     </div>
 
