@@ -33,6 +33,7 @@ function Bottom() {
         })
         setToorder(updated)
         setShowData(updated)
+        setButton(false)
         const updated1=inventry.filter((e)=>{
             if(e.id===id){
                 e=!e  
@@ -41,6 +42,7 @@ function Bottom() {
         })
         setInventry(updated1) 
         setShowData(updated1)
+        setButton(true)
     }
     const handleToggle=(id)=>{
         const updated=inventry.filter((e)=>{
@@ -58,9 +60,7 @@ function Bottom() {
        
     }
     const handleAddtoOrderInventry = (e) => {
-        setToorder([...Toorder, e])
-        setShowData([...Toorder,e])
-        
+        setToorder([...Toorder, e])   
     }
     return (
         <>
