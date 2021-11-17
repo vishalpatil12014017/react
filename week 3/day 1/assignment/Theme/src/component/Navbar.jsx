@@ -4,11 +4,12 @@ import Modal1 from './Modal1'
 import { useContext } from 'react'
 import { AuthContext } from './AuthContext'
 import { ThemeContext } from './ThemeContext'
+import styles from './style'
 function Navbar() {
     const {Token,handleTokenchange}= useContext(AuthContext)
     const {Toggle,handlestatus}= useContext(ThemeContext)
     return (
-        <div className="fluid-container" style={Toggle?{backgroundColor:"black",color:"white",border:"1px solid white"}:{backgroundColor: "white",color:"black",border:"1px solid black"}}>
+        <div className="fluid-container" style={Toggle?styles.dark:styles.light}>
             <nav className="navbar navbar-expand-lg ">
                 <div className="container-fluid" >
                     <a className="navbar-brand">Navbar</a>

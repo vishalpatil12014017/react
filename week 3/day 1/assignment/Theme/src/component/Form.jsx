@@ -2,16 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 import { useContext } from 'react'
 import { ThemeContext } from './ThemeContext'
-
+import styles from './style'
 const Theme=styled.header`
+
    
 `
 
 function Form() {
     const {Toggle}= useContext(ThemeContext)
-
     return (
-       <Theme style={Toggle?{backgroundColor:"black",color:"white",border:"1px solid white"}:{backgroundColor: "white",color:"black",border:"1px solid black"}}>
+       <Theme style={Toggle?styles.dark:styles.light}>
             <div className="container p-5" style={{ maxWidth: "920px" }}>
             <div className="col">
                 <h4 className="mb-3">Billing address</h4>
