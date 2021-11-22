@@ -7,7 +7,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory, you can run:
 
 ### `npm start`
-### `json-server db.json --port 3001 --watch`
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) or (https://zomattoappapi-vishal-fw11-207-masaischool.vercel.app/) to view it in the browser.
 
