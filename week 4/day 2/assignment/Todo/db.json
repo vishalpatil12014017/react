@@ -1,0 +1,14 @@
+{
+  "todos": [
+    {
+      "id": "f900d5f9-34be-4224-95ce-5b0d67e85dd6",
+      "status": true,
+      "title": "learn binery search"
+    },
+    {
+      "id": "00fc0db4-babf-47b6-bd56-759c0589424f",
+      "status": false,
+      "title": "learn greedy"
+    }
+  ]
+}
