@@ -104,7 +104,7 @@ function Todos() {
         }
     })
     return (
-        <Toolbar>
+        <Toolbar className="pb-5">
             {
                 loading ? <h1>...loading</h1> :
                     <div className="text-center p-4 bg-white m-auto mt-5 todo" style={{ maxWidth: "500px" }}>

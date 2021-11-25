@@ -38,15 +38,15 @@ export const todos = (state=init, { type, payload }) => {
                 ...state,
                 todos: {
                     ...state.todos,
-                    loading: false
+                    loading: true
                 }
             };
         case GET_TODOS_SUCCESS:
             return {
                 ...state,
                 todos: {
-                    loading: false,
                     ...state.todos,
+                    loading: false,
                     data: payload
                 }
             };
