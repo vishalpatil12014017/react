@@ -28,6 +28,7 @@ function Details() {
                                         <option value="3">6-9</option>
                                         <option value="3">9-12</option>
                                     </select>
+                                    <h5>${value[0].price}</h5>
                                     <button className="btn btn-primary float-end mt-3"
                                         onClick={async () => {
                                             try {

@@ -10,16 +10,13 @@ function Dashboard() {
     const { loading, data, error } = useSelector(store => store.movies.movies)
     const { Token } = useSelector(store => store.Auth)
     const value=data.filter(e=>e.status==true)
-    console.log('value:', value)
     useEffect(() => {
         getdata()
     }, [])
     const getdata = async () => {
         dispatch(getmovies())
     }
-    if(!Token){
-        return <Redirect to="/login"></Redirect>
-    }
+   
     return (
         <div>
             {
@@ -36,7 +33,7 @@ function Dashboard() {
                                             <h5 className="card-title">{e.name}</h5>
                                             <button className="btn btn-danger"  onClick={async () => {
                                             try {
-                                                const { data } = await axios.patch(`http://localhost:3001/movies/${value[0].id}`,
+                                                const { data } = await axios.patch(`http://localhost:3001/movies/${e.id}`,
                                                     { status: false }
                                                 ).then(getdata())
                                             } catch (err) {
@@ -58,6 +55,7 @@ function Dashboard() {
                                         <img src={e.url} className="card-img-top" alt="..." style={{ maxHeight: "400px" }} />
                                         <div className="card-body">
                                             <h5 className="card-title">{e.name}</h5>
+                                            <h5>${e.price}</h5>
                                             <Link to={`/details/${e.id}`} className="btn btn-primary float-end">See Details</Link>
                                         </div>
                                     </div>
