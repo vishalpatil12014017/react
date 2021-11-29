@@ -23,7 +23,7 @@ function Navbar() {
                                 <a className="nav-link px-3">Pricing</a>
                                 <a className="nav-link px-3">Contact Us</a>
                                 {
-                                    !Token ? <Link to="/todos" className="nav-link px-3 btn btn-primary py-0 my-auto text-white" type="button" style={{ maxHeight: "40px" }} >Login</Link> : <Link to="/login" className="nav-link px-3 btn btn-primary py-0 my-auto text-white" type="button" style={{ maxHeight: "40px" }} onClick={() => {
+                                    !Token ? <Link to="/login" className="nav-link px-3 btn btn-primary py-0 my-auto text-white" type="button" style={{ maxHeight: "40px" }} >Login</Link> : <Link to="/login" className="nav-link px-3 btn btn-primary py-0 my-auto text-white" type="button" style={{ maxHeight: "40px" }} onClick={() => {
                                         dispatch(loginfail())
                                         localStorage.setItem("Token", "")
                                         localStorage.setItem("isAuth", false)

@@ -33,7 +33,7 @@ function Login() {
 
 
     return (
-        <div className="p-5 border border-dark m-5 mx-auto bg-white" style={{ maxWidth: "400px", margin: "auto" ,borderRadius:"15px"}}>
+        <div className="p-5 border border-dark m-5 mx-auto bg-white" style={{ maxWidth: "400px", margin: "auto", borderRadius: "15px" }}>
             <h1 className="text-center">Login Here</h1>
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">

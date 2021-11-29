@@ -34,6 +34,16 @@ function Dashboard() {
                                         <img src={e.url} className="card-img-top" alt="..." style={{ maxHeight: "400px" }} />
                                         <div className="card-body">
                                             <h5 className="card-title">{e.name}</h5>
+                                            <button className="btn btn-danger"  onClick={async () => {
+                                            try {
+                                                const { data } = await axios.patch(`http://localhost:3001/movies/${value[0].id}`,
+                                                    { status: false }
+                                                ).then(getdata())
+                                            } catch (err) {
+
+                                            }
+                                            
+                                        }}>Cancel Booking</button>
                                             <Link to={`/payment`} className="btn btn-primary float-end">Download Ticket</Link>
                                         </div>
                                     </div>
