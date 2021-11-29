@@ -9,7 +9,7 @@ function Login() {
     const [formdata, setFormdata] = useState({})
     const { Token } = useSelector(store => store.Auth)
     const dispatch = useDispatch()
-    const history =useHistory()
+    const history = useHistory()
     const handleSubmit = (e) => {
         e.preventDefault();
         axios.post('https://reqres.in/api/register', {
@@ -17,9 +17,9 @@ function Login() {
             password: formdata.password
         })
             .then(function (response) {
-                const action=loginsucces(response.data.token)
-                localStorage.setItem("Token",response.data.token)
-                localStorage.setItem("isAuth",true)
+                const action = loginsucces(response.data.token)
+                localStorage.setItem("Token", response.data.token)
+                localStorage.setItem("isAuth", true)
                 dispatch(action)
             })
     }
@@ -33,7 +33,7 @@ function Login() {
 
 
     return (
-        <div className="p-5 border border-dark m-5 mx-auto bg-white" style={{maxWidth:"500px",margin:"auto"}}>
+        <div className="p-5 border border-dark m-5 mx-auto bg-white" style={{ maxWidth: "400px", margin: "auto" ,borderRadius:"15px"}}>
             <h1 className="text-center">Login Here</h1>
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
@@ -47,11 +47,11 @@ function Login() {
                 </div>
 
                 <button type="submit" className="btn btn-primary" data-bs-dismiss="modal" aria-label="Close" onClick={(e) => {
-                     
+
                     handleSubmit(e)
-                   !Token? alert("Login Successful")  : alert("Plese Provide valid Information")
-                  history.push("/")
-                   
+                    !Token ? alert("Login Successful") : alert("please login")
+                    history.push("/about")
+
                 }
 
                 }>Submit</button>
