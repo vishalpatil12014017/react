@@ -50,7 +50,7 @@ function Login() {
 
                     handleSubmit(e)
                     !Token ? alert("Login Successful") : alert("please login")
-                    history.push("/")
+                    history.push("/about")
 
                 }
 
