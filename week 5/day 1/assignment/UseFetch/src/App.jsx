@@ -7,15 +7,9 @@ import Reducer from './components/Reducer';
 function App() {
   return (
     <div className="App text-center text-white">
-      <Delay />
-      {/* <hr />
-      <h1>Hello</h1>
-      <hr />
-      <Throttle_debounce></Throttle_debounce>
-      <hr />
+      
       <Fetch></Fetch>
-      <hr />
-      <Reducer></Reducer> */}
+    
     </div>
   )
 
