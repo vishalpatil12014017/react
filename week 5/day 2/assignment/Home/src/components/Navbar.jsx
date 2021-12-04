@@ -7,6 +7,7 @@ import IconButton from '@mui/material/IconButton';
 import GitHub from '@mui/icons-material/GitHub';
 import LinkedIn from '@mui/icons-material/LinkedIn';
 import DrawerOpen from './DrawerOpen';
+
 export default function ButtonAppBar() {
     return (
         <>
@@ -39,6 +40,9 @@ export default function ButtonAppBar() {
                         <Typography variant="h6" component="div" style={{fontSize:"1.5vw"}}>
                             LinkedIn
                         </Typography>
+                     
+                     
+                      
                     </Toolbar>
                 </AppBar>
             </Box>

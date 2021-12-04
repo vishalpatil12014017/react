@@ -11,6 +11,8 @@ import MailIcon from '@mui/icons-material/Mail';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Avatar } from '@mui/material';
+import { Link } from 'react-router-dom';
+import Typography from '@mui/material/Typography';
 function DrawerOpen() {
   const [state, setState] = React.useState({
     top: false,
@@ -56,12 +58,12 @@ function DrawerOpen() {
       </List>
       <Divider />
       <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+        {['All mail', 'Trash', 'Spam',"Table"].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>
               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
             </ListItemIcon>
-            <ListItemText primary={text} />
+            <Link style={{textDecoration:"none"}}  to={text==="Table"?"/table":""}><ListItemText primary={text} /></Link>
           </ListItem>
         ))}
       </List>
