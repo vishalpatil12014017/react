@@ -1,0 +1,16 @@
+{
+  "todos": [
+    {
+      "username": "Vishal Patil",
+      "email": "eve.holt@reqres.in",
+      "password": "aaaaaa",
+      "id": 1
+    },
+    {
+      "username": "Vishal_Patil17",
+      "email": "vishal_fw11_207@masai.school",
+      "password": "aaaaaaaaaa",
+      "id": 2
+    }
+  ]
+}
