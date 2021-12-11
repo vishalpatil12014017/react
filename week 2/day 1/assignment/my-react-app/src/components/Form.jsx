@@ -9,7 +9,7 @@ function Form() {
         username: "",
         age: "",
         file: "",
-        ismarried:false
+        ismarried: false
     })
     const [data, setData] = useState([])
     useEffect(() => {
@@ -43,11 +43,11 @@ function Form() {
         const { data } = await table.post("/", {
             ...formdata
         })
-        .then(handleAdd())
-        .then(e.target.username.value="",e.target.age.value="",e.target.address.value="",e.target.salary.value="",e.target.ismarried.checked=false,e.target.file.value="")
-        .then(handleAdd())
-        
-        
+            .then(handleAdd())
+            .then(e.target.username.value = "", e.target.age.value = "", e.target.address.value = "", e.target.salary.value = "", e.target.ismarried.checked = false, e.target.file.value = "")
+            .then(handleAdd())
+
+
 
 
         // fetch("http://localhost:3001/Form", {
@@ -66,7 +66,7 @@ function Form() {
         if (e.target.name === "department") {
             const { data } = await table.get("/", {
                 params: {
-                    department:e.target.value,
+                    department: e.target.value,
                     _page: page,
                     _limit: 4
                 }
@@ -79,8 +79,8 @@ function Form() {
         else if (e.target.name === "sort" && e.target.value === "Low To High") {
             const { data } = await table.get("/", {
                 params: {
-                    _order:"asc",
-                    _sort:"salary",
+                    _order: "asc",
+                    _sort: "salary",
                     _page: page,
                     _limit: 4
                 }
@@ -93,8 +93,8 @@ function Form() {
         else if (e.target.name === "sort" && e.target.value === "High To Low") {
             const { data } = await table.get("/", {
                 params: {
-                    _order:"desc",
-                    _sort:"salary",
+                    _order: "desc",
+                    _sort: "salary",
                     _page: page,
                     _limit: 4
                 }
@@ -116,9 +116,8 @@ function Form() {
     const handledelete = async (id) => {
         console.log(id)
         const { data } = await table.delete(`/${id}`, {
-           
-        })
-        .then(handleAdd())
+
+        }).then(handleAdd())
     };
     return (
         <>
@@ -150,7 +149,7 @@ function Form() {
 
                 {
                     data.map((e) => (
-                        <Table style={e}  handledelete={handledelete}></Table>
+                        <Table style={e} handledelete={handledelete}></Table>
                     ))
                 }
                 <div className="center">
