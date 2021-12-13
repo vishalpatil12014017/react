@@ -32,21 +32,6 @@ function Form() {
         })
     };
     const { successNotification, failureNotification } = useNotification();
-    const [suc, setsuc] = useState(false)
-    const [err, seterr] = useState(false)
-    // useEffect(() => {
-    //     var timer = setTimeout(() => {
-    //          setsuc(false)
-    //     }, 2000);
-    //     clearTimeout(timer)
-
-    //     if (suc == true) {
-    //         return <div class="alert alert-primary" role="alert">
-    //             A simple primary alert—check it out!
-    //         </div>
-    //     }
-    // }, [])
-
     return (
         <div className="p-5 border border-dark m-5 mx-auto bg-white" style={{ maxWidth: "500px", margin: "auto", borderRadius: "15px" }}>
             <h1 className="text-center">Register Here</h1>
