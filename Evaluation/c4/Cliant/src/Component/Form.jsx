@@ -1,10 +1,23 @@
 import React from 'react'
 import axios from 'axios';
-import { useState } from 'react';
-import { useHistory } from 'react-router-dom';
-function Register() {
+import useFetch from './UseFetch';
+import { useState, useEffect } from 'react';
+function useNotification() {
+    const successNotification = (data, delay) => {
+
+    }
+    const failureNotification = (data, delay) => {
+
+    }
+    return {
+        successNotification,
+        failureNotification,
+    }
+}
+function Form() {
+    const { loading, error, data } = useFetch("http://localhost:3001/User")
+    console.log('data:', data)
     const [formdata, setFormdata] = useState({})
-    const history = useHistory()
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
         setFormdata({
@@ -12,6 +25,22 @@ function Register() {
             [name]: type === "checkbox" ? checked : value,
         })
     };
+    const { successNotification, failureNotification, } = useNotification();
+    const [suc, setsuc] = useState(false)
+    const [err, seterr] = useState(false)
+    useEffect(() => {
+        var timer = setTimeout(() => {
+             setsuc(false)
+        }, 2000);
+        clearTimeout(timer)
+      
+        if (suc == true) {
+            return <div class="alert alert-primary" role="alert">
+                A simple primary alert—check it out!
+            </div>
+        }
+    }, [])
+
     return (
         <div className="p-5 border border-dark m-5 mx-auto bg-white" style={{ maxWidth: "500px", margin: "auto", borderRadius: "15px" }}>
             <h1 className="text-center">Register Here</h1>
@@ -36,29 +65,38 @@ function Register() {
                     <input type="number" className="form-control" name="mobile" onChange={handleChange} />
                 </div>
                 <button type="submit" className="btn btn-primary mt-2" onClick={(e) => {
-
                     e.preventDefault();
-                    axios.post('https://masai-api-mocker.herokuapp.com/auth/register', {
-                        email: formdata.email,
-                        password: formdata.password,
-                        First_Name: formdata.First_Name,
-                        Last_Name: formdata.Last_Name,
-                        mobile: formdata.mobile,
-                        DOB: formdata.date
-                    })
-                        .then(function (response) {
-                            if (response.data.error == true) {
-                                alert("Registration failed, user already exists")
-                                history.replace("/register")
-                                setFormdata("")
 
-                            } else {
-                                
-                                alert("Registration Success")
-                                history.replace("/")
-                            }
+                    data.filter((x) => {
+                        if (x.email == formdata.email) {
+                            failureNotification("unsuccessful", 2)
+                            alert("Already Added")
+                        } else {
+                            axios.post('http://localhost:3001/User', {
+                                email: formdata.email,
+                                password: formdata.password,
+                                First_Name: formdata.First_Name,
+                                Last_Name: formdata.Last_Name,
+                                mobile: formdata.mobile,
+                                DOB: formdata.date
+                            })
+                            successNotification("ABC", 2)
+                            alert("User Successfully Added")
+                        }
+                    })
+                    if (data.length === 0) {
+                        axios.post('http://localhost:3001/User', {
+                            email: formdata.email,
+                            password: formdata.password,
+                            First_Name: formdata.First_Name,
+                            Last_Name: formdata.Last_Name,
+                            mobile: formdata.mobile,
+                            DOB: formdata.date
                         })
-                   
+                        successNotification("QQQQ", 2000)
+                        alert("User Successfully Added")
+                    }
+
 
 
                 }
@@ -69,4 +107,4 @@ function Register() {
     )
 }
 
-export default Register
+export default Form
