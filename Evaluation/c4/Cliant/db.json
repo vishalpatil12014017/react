@@ -1,12 +1,28 @@
 {
   "User": [
     {
+      "email": "vishal_fw11_207@masai.school",
+      "First_Name": "vishal",
+      "Last_Name": "patil",
+      "mobile": "9168120140",
+      "DOB": "2021-12-02",
+      "id": 1
+    },
+    {
       "email": "eve.holt@reqres.in",
       "First_Name": "vishal",
       "Last_Name": "patil",
       "mobile": "9168120140",
       "DOB": "2021-12-01",
-      "id": 1
+      "id": 2
+    },
+    {
+      "email": "vishal_fw11_07@masai.school",
+      "First_Name": "vishal",
+      "Last_Name": "patil",
+      "mobile": "9168120140",
+      "DOB": "2021-12-02",
+      "id": 3
     }
   ]
 }

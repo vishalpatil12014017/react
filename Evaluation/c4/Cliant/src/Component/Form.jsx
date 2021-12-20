@@ -74,10 +74,7 @@ function Form() {
                     } else {
                         failureNotification("unsuccessful", 2)
                     }
-
-
                 }
-
                 }>Submit</button>
             </form>
         </div>
